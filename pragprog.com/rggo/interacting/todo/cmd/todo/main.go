@@ -44,7 +44,7 @@ func main() {
 		}
 		// Save the list
 		if err := l.Save(todoFileName); err != nil {
-			fmt.Println(os.Stderr, err)
+			fmt.Fprintln(os.Stderr, err)
 			os.Exit(1)
 		}
 	case *task != "":
